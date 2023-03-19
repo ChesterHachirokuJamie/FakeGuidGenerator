@@ -1,5 +1,6 @@
 #include <time.h>
 #include <stdlib.h>
+#include <windows.h>
 #include <stdio.h>
 void main()
 {
@@ -7,7 +8,10 @@ void main()
     int lowerLimit = 0, upperLimit = 15;
     int a[31];
     int i;
-    for (i = 0 ; i<32; i++)
+    int j=1;
+    printf("Fake GUID Generator, generating 1 Fake GUID per second.\n");
+    for (j=0;; j++)
+    {for (i = 0 ; i<32; i++)
     {
         int r =  lowerLimit + rand() % (upperLimit - lowerLimit);
         if (r==10)
@@ -26,5 +30,8 @@ void main()
             printf("%d", r);
         if (i==7||i==11||i==15||i==19)
                 printf("-");
+    }
+    printf("\n");
+    Sleep(1000);
     }
 }
