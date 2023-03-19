@@ -6,9 +6,8 @@ void main()
 {
     srand(time(0));
     int lowerLimit = 0, upperLimit = 15;
-    int a[31];
     int i;
-    int j = 1;
+    int j;
     printf("Fake GUID Generator, generating 1 Fake GUID per second.\n");
     for (j = 0;; j++)
     {
